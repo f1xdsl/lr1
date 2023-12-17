@@ -10,7 +10,7 @@ class Roman : public Writer
 	std::string _poems;
 	std::string _bio;
 public:
-	Roman(std::string FIO, std::string years, std::string poems, std::string bio);
+	Roman();
 	Roman(std::ifstream& fin);
 	~Roman();
 	void edit();

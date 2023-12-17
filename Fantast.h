@@ -7,9 +7,9 @@ class Fantast : public Writer
 {
 	std::string _FIO;
 	std::string _poems;
-	bool _films;
+	int _films;
 public:
-	Fantast(std::string FIO, std::string poems, bool films);
+	Fantast();
 	Fantast(std::ifstream& fin);
 	~Fantast();
 	void edit();

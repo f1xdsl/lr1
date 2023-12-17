@@ -35,12 +35,9 @@ Poet::Poet(){
 
 Poet::Poet(std::ifstream& fin) {
 	setType(1);
-	fin >> _FIO;
-	fin.ignore(256, '\n');
-	fin >> _years;
-	fin.ignore(256, '\n');
-	fin >> _poems;
-	fin.ignore(256, '\n');
+	getline(fin, _FIO);
+	getline(fin, _years);
+	getline(fin, _poems);
 }
 
 void Poet::edit() {
