@@ -17,8 +17,8 @@ public:
 	int getType();
 	bool successful();
 	virtual void save(ofstream& fout) = 0;
-	virtual void load(ifstream& fin) = 0;
 	virtual void edit() = 0;
+	virtual void print(ostream& out) = 0;
 	virtual ~Writer() = 0;
 };
 

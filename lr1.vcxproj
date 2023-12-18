@@ -20,12 +20,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Fantast.h" />
+    <ClInclude Include="Keeper.h" />
     <ClInclude Include="Poet.h" />
     <ClInclude Include="Roman.h" />
     <ClInclude Include="Writer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Fantast.cpp" />
+    <ClCompile Include="Keeper.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Poet.cpp" />
     <ClCompile Include="Roman.cpp" />

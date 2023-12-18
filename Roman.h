@@ -5,10 +5,10 @@
 #include "Writer.h"
 class Roman : public Writer
 {
-	std::string _FIO;
-	std::string _years;
-	std::string _poems;
-	std::string _bio;
+	string _FIO;
+	string _years;
+	string _poems;
+	string _bio;
 public:
 	Roman();
 	Roman(std::ifstream& fin);
