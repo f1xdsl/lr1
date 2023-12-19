@@ -1,7 +1,5 @@
 #pragma once
 
-#ifndef WRITER_H
-#define WRITER_H
 #include <string>
 #include <fstream>
 #include <iostream>
@@ -23,7 +21,4 @@ public:
 };
 
 
-
-
-#endif // !WRITER_H
 

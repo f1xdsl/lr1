@@ -19,14 +19,14 @@ Roman::Roman() {
 			throw (string)"Некорретно введены годы жизни";
 		setSuccess(true);
 
-		cout << "Введите лучшие произведения";
+		cout << "Введите лучшие произведения: ";
 		getline(cin, this->_poems);
 		if (_poems == "")
 		{
 			throw (string)"Некорректно введены произведения";
 		}
 
-		cout << "Введите биографию";
+		cout << "Введите биографию: ";
 		getline(cin, this->_bio);
 		if (_bio == "")
 		{
@@ -47,6 +47,11 @@ Roman::Roman(std::ifstream& fin) {
 	getline(fin, _years);
 	getline(fin, _poems);
 	getline(fin, _bio);
+}
+
+Roman::~Roman()
+{
+	cout << "Был вызван деструктор класса Roman" << endl;
 }
 
 void Roman::edit() {
@@ -109,7 +114,7 @@ void Roman::edit() {
 		default:
 			break;
 		}
-		setSuccess(false);
+		setSuccess(true);
 	}
 	catch (string err)
 	{
@@ -124,14 +129,14 @@ void Roman::save(ofstream& fout)
 		<< this->_FIO << endl
 		<< this->_years << endl
 		<< this->_poems << endl
-		<< this->_bio << endl
+		<< this->_bio << endl;
 }
 
 void Roman::print(ostream& out)
 {
-	out << "\nПоэт\n\n"
+	out << "\nРоманист\n\n"
 		<< "ФИО : " << _FIO << endl
 		<< "Годы жизни : " << _years << endl
 		<< "Лучшие произведения : " << _poems << endl
-		<< "Биография : " << _bio << endl
+		<< "Биография : " << _bio << endl;
 }

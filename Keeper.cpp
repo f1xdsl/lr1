@@ -271,6 +271,7 @@ void Keeper::load()
 	while (fin)
 	{
 		fin >> type;
+		fin.ignore(256, '\n');
 		if (fin.peek() == -1)
 		{
 			break;

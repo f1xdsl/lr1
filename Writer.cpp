@@ -17,3 +17,6 @@ void Writer::setSuccess(bool success) {
 bool Writer::successful() {
 	return _success;
 }
+
+Writer::~Writer() {
+}

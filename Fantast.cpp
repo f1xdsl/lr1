@@ -13,7 +13,7 @@ Fantast::Fantast() {
 		setSuccess(true);
 
 		
-		cout << "Введите лучшие произведения";
+		cout << "Введите лучшие произведения ";
 		getline(cin, this->_poems);
 		if (_poems == "")
 		{
@@ -21,6 +21,8 @@ Fantast::Fantast() {
 		}
 		setSuccess(true);
 
+
+		cout << "Введите сняты ли фильмы по книгам (1 - да, 0 - нет) : ";
 		cin >> _films;
 		setSuccess(true);
 
@@ -37,6 +39,11 @@ Fantast::Fantast(std::ifstream& fin) {
 	getline(fin, _FIO);
 	getline(fin, _poems);
 	fin >> _films;
+}
+
+Fantast::~Fantast()
+{
+	cout << "Был вызван деструктор класса Fantast" << endl;
 }
 
 void Fantast::edit() {
@@ -91,7 +98,7 @@ void Fantast::edit() {
 		default:
 			break;
 		}
-		setSuccess(false);
+		setSuccess(true);
 	}
 	catch (string err)
 	{
@@ -110,8 +117,8 @@ void Fantast::save(ofstream& fout)
 
 void Fantast::print(ostream& out)
 {
-	out << "\nПоэт\n\n"
+	out << "\nФантаст\n\n"
 		<< "ФИО : " << _FIO << endl
 		<< "Лучшие произведения : " << _poems << endl
-		<< "Сняты ли фильмы по произведениям : " << _films << endl
+		<< "Сняты ли фильмы по произведениям : " << _films << endl;
 }

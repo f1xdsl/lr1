@@ -1,7 +1,4 @@
 #pragma once
-#ifndef ROMAN_H
-#define ROMAN_H
-
 #include "Writer.h"
 class Roman : public Writer
 {
@@ -19,8 +16,6 @@ public:
 
 
 };
-
-#endif // !ROMAN_H
 
 
 

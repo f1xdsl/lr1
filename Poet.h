@@ -1,7 +1,4 @@
 #pragma once
-#ifndef POET_H
-#define POET_H
-
 #include "Writer.h"
 class Poet : public Writer
 {
@@ -19,7 +16,6 @@ public:
 
 };
 
-#endif // !POET_H
 
 
 

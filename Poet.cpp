@@ -40,6 +40,11 @@ Poet::Poet(std::ifstream& fin) {
 	getline(fin, _poems);
 }
 
+Poet::~Poet()
+{
+	cout << "Был вызван деструктор класса Poet" << endl;
+}
+
 void Poet::edit() {
 	try
 	{
@@ -89,7 +94,7 @@ void Poet::edit() {
 		default:
 			break;
 		}
-		setSuccess(false);
+		setSuccess(true);
 	}
 	catch (string err)
 	{
@@ -103,7 +108,7 @@ void Poet::save(ofstream& fout)
 	fout << getType() << endl
 		<< this->_FIO << endl
 		<< this->_years << endl
-		<< this->_poems << endl
+		<< this->_poems << endl;
 }
 
 void Poet::print(ostream& out)
@@ -111,5 +116,5 @@ void Poet::print(ostream& out)
 	out << "\nПоэт\n\n"
 		<< "ФИО : " << _FIO << endl
 		<< "Годы жизни : " << _years << endl
-		<< "Лучшие произведения : " << _poems << endl
+		<< "Лучшие произведения : " << _poems << endl;
 }
